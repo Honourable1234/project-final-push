@@ -1,0 +1,75 @@
+.Converter{
+    width: 900px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 200px auto;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 10px 3px grey;
+    text-align: center;
+    padding-top: 20px;
+}
+.title{
+    font-family: sans-serif;
+}
+.arrow{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.input1{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.breaker{
+    display: none;
+}
+.amount{
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 40px;
+}
+.answer{
+    margin-top: 25px;
+}
+.button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+@media (max-width: 950px){
+    .Converter{
+        width: 700px;
+    }
+}
+@media (max-width: 780px){
+    .Converter{
+        width: 520px;
+        height: 400px;
+        margin: 70px auto;
+    }
+    .breaker{
+        display: block;
+    }
+    .arrow{
+        margin-top: 15px;
+    }
+}
+@media (max-width: 600px){
+    .Converter{
+        width: 300px;
+    }
+}
+@media (max-width: 350px){
+    .Converter{
+        width: 100%;
+    }
+    .input1{
+        width: 90%;
+    }
+    .amount{
+        width: 90%;
+    }
+}
