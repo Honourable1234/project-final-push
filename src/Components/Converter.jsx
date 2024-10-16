@@ -5,20 +5,23 @@ import { useState, useEffect } from 'react'
 
 function Converter() {
         const apiKey = import.meta.env.VITE_APIKEY;
+        const [conversionResult, setConversionResult] = useState(null)
         
         const [selectedCurrency1, setSelectedCurrency1] = useState('');
         const handleSelectChange1 = (event) => {
           setSelectedCurrency1(event.target.value);
+          setConversionResult(null)
         }
         const [selectedCurrency2, setSelectedCurrency2] = useState('');
         const handleSelectChange2 = (event) => {
           setSelectedCurrency2(event.target.value);
+          setConversionResult(null)
         }
         const [amount, setAmount] = useState('');
         const handleInputChange = (event) =>{
           setAmount(event.target.value);
+          setConversionResult(null)
         }
-        const [conversionResult, setConversionResult] = useState(null)
        async function Convert(){
         try {
           const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${selectedCurrency1}`)
